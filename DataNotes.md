@@ -75,3 +75,15 @@
 - CRS used: EPSG:32632 - WGS84 / UTM zone 32N which covers the study area and enables area measurements.
 - All data sources were clipped
 - Please see 5 quality checks within each dataset above
+All files are located in C:\Users\tadeo\Downloads\GeoDev Lab\Data\Processed
+
+[Precipitation Projected CLP.tif](https://github.com/user-attachments/files/32445866/Precipitation.Projected.CLP.tif)
+[DEM CLP.tif](https://github.com/user-attachments/files/32445859/DEM.CLP.tif)
+[L9_B6_CLP.tif](https://github.com/user-attachments/files/32445857/L9_B6_CLP.tif)
+[L9_B3_CLP.tif](https://github.com/user-attachments/files/32445856/L9_B3_CLP.tif)
+[Weather.zip](https://github.com/user-attachments/files/32445855/Weather.zip)
+[L9_B4_CLP.tif](https://github.com/user-attachments/files/32445841/L9_B4_CLP.tif)
+[L9_B5_CLP.tif](https://github.com/user-attachments/files/32445837/L9_B5_CLP.tif)
+[Fire Records CLP.zip](https://github.com/user-attachments/files/32445836/Fire.Records.CLP.zip)
+
+

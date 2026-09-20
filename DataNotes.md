@@ -6,6 +6,27 @@
 - Geometry Type: Polygon
 - No Nulls in Yankari Reserve
 - Covers my LGA
+- Extracted 12/09/2026
+- Completeness: Data was complete
+- Currency: Boundaries remain unchanged
+- Positional: Dataset of study area seems to be a bit off from the basemap as at when recorded in 2010. This was flagged.
+- Attribute: Labels are right
+- Fitness: Data serves as the study area and can work for this project 
+
+## Fire Records Data
+- Source: https://firms.modaps.eosdis.nasa.gov/download/list.php
+- Downloaded: 12/09/2026
+- 2004 features, points (between Dec 1 2025 to Feb 28 2026)
+- Distinguishing Columns: Latitude, Longitude, brightness, scan, track, acq_date, acq_time, satellite, instrument, confidence, version, bright_T31, FRP, Daynight, Type
+- Geometry Type: Points
+- No Nulls 
+- Covers my Study Area
+- Extracted 12/09/2026
+- Completeness: Data was complete
+- Currency: Current
+- Positional: Dataset of points are within the study area.
+- Attribute: Labels are right
+- Fitness: Data serves as references and can work for this project
 
 ## Administrative Files
 - Source: https://diva-gis.org/data.html
@@ -15,3 +36,42 @@
 - Geometry Type: Polygon
 - Two Nulls in Yankari Reserve
 - Covers my Study Area
+- Extracted 12/09/2026
+- Completeness: Data was incomoplete and contains a few nulls, hence, the fields cannot be used for computation
+- Currency: Boundaries remain unchanged
+- Positional: Dataset of study area seems to match with recent studies in terms of position.
+- Attribute: Labels are right
+- Fitness: Data serves as the study area and can work for this project
+
+## Landsat Imageries (30m)
+- Source: https://earthexplorer.usgs.gov/
+- Downloaded: 12/09/2026
+- Raster data LC9 L2 Bands 3, 4, 5, and 6, as well as Metadata
+- Distinguishing Columns: unable to access attribute table
+- Geometry Type: Nil
+- Covers my Study Area
+- Extracted 12/09/2026
+- Completeness: Data was complete containing all bands required for computation
+- Currency: Current for the area and corresponds to basemaps
+- Positional: Dataset of study area seems to match with recent studies in terms of position.
+- Attribute: Labels are right
+- Fitness: Data serves as the study area and can work for this project
+
+## Precipitation Imagery (GRIDMET 4km Daily)
+- Source: https://app.climateengine.org/climateEngine
+- Downloaded: 12/09/2026
+- Raster data 
+- Distinguishing Columns: unable to access attribute table
+- Geometry Type: Nil
+- Covers my Study Area
+- Extracted 12/09/2026
+- Completeness: Data was complete containing all bands required for computation
+- Currency: Current for the area and corresponds to basemaps
+- Positional: Dataset of study area seems to match with recent studies in terms of position.
+- Attribute: Labels are right
+- Fitness: Might be too large in terms of resolution, however, should suffice given the quality of data available worldwide for free
+
+
+- CRS used: EPSG:32632 - WGS84 / UTM zone 32N which covers the study area and enables area measurements.
+- All data sources were clipped
+- Please see 5 quality checks within each dataset above

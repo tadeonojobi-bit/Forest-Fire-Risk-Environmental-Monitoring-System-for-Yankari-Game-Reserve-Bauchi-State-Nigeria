@@ -8,5 +8,5 @@ Which zones of Yankari Game Reserve carry the highest wildfire risk in dry seaso
 - Imagery for NDVI — Landsat 8/9 — https://earthexplorer.usgs.gov — GeoTIFF (bands 4 & 5) - 1.05GB
 - Elevation/slope — SRTM DEM — https://earthexplorer.usgs.gov — GeoTIFF - 25MB
 - Active fire detections — NASA FIRMS — https://firms.modaps.eosdis.nasa.gov/map — Shapefile/CSV
-- Rainfall — CHIRPS — https://data.chc.ucsb.edu/products/CHIRPS-2.0 — GeoTIFF
+- Precipitation — GRIDMET - https://app.climateengine.org/climateEngine — GeoTIFF
 - Weather (wind/temp/humidity) — NASA POWER — https://power.larc.nasa.gov/data-access-viewer — CSV

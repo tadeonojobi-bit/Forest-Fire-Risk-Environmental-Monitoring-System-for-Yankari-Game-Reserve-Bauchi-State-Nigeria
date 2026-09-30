@@ -11,3 +11,5 @@
 *What surprised me:* For a forest reserve, there were more fire occurrences than I expected which were as a result of controlled fires and other anthropogenic factors.
 
 *What data I still need:* I still need the NDVI/NDMI layer to combine with this into an actual risk score, not just a fire count
+
+The result was far higher than expected: fire detections span almost the entire reserve, with dense, near-uniform coverage across the interior rather than scattered or isolated points. This is a substantive early signal for the main research question — it confirms Yankari's dry-season fire activity is extensive and reserve-wide, not localized to one or two hotspots, which raises the bar for what a "high-risk zone" will mean once vegetation, terrain, and rainfall are layered in next.

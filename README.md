@@ -35,7 +35,7 @@ A fire-risk map of Yankari Game Reserve combining vegetation dryness (NDVI/NDMI 
 
 ## 6. Documentation and Weekly Deliverables
 
-- [Week 1 — Project Brief](./week-1-project-brief/) — the research question and a source link for every dataset
+- [Week 1 — Project Brief](project-brief.md) — the research question and a source link for every dataset
 - [Week 2 — Data Notes](./week-2-data-notes/) — what was downloaded and from where
 - [Week 3 — Prepared Data & Quality Checks](./week-3-prepared-data/) — cleaned/reprojected data and the checks run on it
 - [Week 4 — Analysis, Map & Summary](Month-1-summary.md) — the spatial operation, the output map, and `month-1-summary.md`

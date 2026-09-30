@@ -1,10 +1,10 @@
-# Yankari Fire-Risk Monitor
-
-A GeoDev Lab project by Ade-Onojobi Taiwo — building, over one year, toward a coded, repeatable wildfire-risk monitoring system for Yankari Game Reserve, Nigeria.
-
+# Forest Fire Risk and Environmental Monitoring System for Yankari Game Reserve, Bauchi State, Nigeria
 ## 1. Project Overview
+This project aims to develop a geospatial system for assessing, monitoring, and visualizing forest fire risk within Yankari Game Reserve using Geographic Information Systems (GIS), remote sensing, environmental data, and geospatial programming. The system will integrate factors such as vegetation condition, land cover, temperature, rainfall, moisture, terrain, and historical fire occurrences to identify areas that may be more vulnerable to wildfire.
 
-This project is the coded, repeatable version of fire-risk analysis that, until now, has been done by hand, once, per study. It builds directly on earlier thesis work modeling fire risk at Ise Forest Reserve using Markov chain projection — the same underlying question, rebuilt here as a system that can be re-run rather than a one-off analysis. Over the course of the year, the project moves from basic GIS operations performed manually in QGIS toward an automated pipeline that pulls fresh data, recomputes risk, and outputs an updated map without manual re-analysis each time.
+The project will begin as a relatively simple GIS-based fire-risk assessment using openly accessible geospatial datasets. Over the course of the GeoDev Lab programme, it will progressively evolve into a code-driven and repeatable geospatial application capable of automating data processing, generating fire-risk indicators, storing historical results, detecting changes over time, and presenting the information through an interactive web map or dashboard. This is the coded, repeatable version of fire-risk analysis that, until now, has been done by hand, once, per study. It builds directly on earlier thesis work modeling fire risk at Ise Forest Reserve using Markov chain projection — the same underlying question, rebuilt here as a system that can be re-run rather than a one-off analysis. Over the course of the year, the project moves from basic GIS operations performed manually in QGIS toward an automated pipeline that pulls fresh data, recomputes risk, and outputs an updated map without manual re-analysis each time.
+
+The ultimate goal is not simply to produce a fire-risk map, but to build a reusable geospatial system that can continuously support environmental monitoring and wildfire management within Yankari Game Reserve.
 
 ## 2. Main Research Question
 
@@ -42,8 +42,6 @@ A fire-risk map of Yankari Game Reserve combining vegetation dryness (NDVI/NDMI 
 
 ## 7. Key Findings — Month 1 Analysis
 
-*Fill in with your actual result after running the spatial join:*
+A spatial join (Join Attributes by Location, Summary: Count) between the FIRMS fire-detection points and the Yankari boundary — both reprojected to EPSG:32632 (UTM Zone 32N) — found **2004 records of fire occurrences** within the reserve boundary between December 2025 and February 2026, against an expectation of **3000+**. Further analysis is needed to be carried out to determine the fire risk score to be compared with the occurences of fire recorded by the satellite.
 
-A spatial join (Join Attributes by Location, Summary: Count) between the FIRMS fire-detection points and the Yankari boundary — both reprojected to EPSG:32632 (UTM Zone 32N) — found **[X] fire detections** within the reserve boundary between December 2025 and February 2026, against an expectation of **[your pre-run estimate]**.
-
-[One or two sentences on what this means for the main research question — e.g., whether fire activity was concentrated, sparse, near the boundary edges, etc. See `week-4-analysis/month-1-summary.md` for the full write-up.]
+See `week-4-analysis/month-1-summary.md` for the full write-up.

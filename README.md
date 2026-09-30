@@ -45,3 +45,4 @@ A fire-risk map of Yankari Game Reserve combining vegetation dryness (NDVI/NDMI 
 A spatial join (Join Attributes by Location, Summary: Count) between the FIRMS fire-detection points and the Yankari boundary — both reprojected to EPSG:32632 (UTM Zone 32N) — found **2004 records of fire occurrences** within the reserve boundary between December 2025 and February 2026, against an expectation of **3000+**. Further analysis is needed to be carried out to determine the fire risk score to be compared with the occurences of fire recorded by the satellite.
 
 See [week-4-analysis/month-1-summary.md](Month-1-summary.md) for the full write-up.
+See map in [Fire Records Map](Fire Records Map.jpg)

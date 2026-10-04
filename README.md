@@ -49,3 +49,5 @@ See map results below
 
 <img width="3507" height="2480" alt="Fire Records Map" src="https://github.com/user-attachments/assets/17fd6d76-1f82-40cc-bdba-127b59502656" />
 
+# Month 2: development environment and early Python
+Week 5: set up Python, VS Code and the terminal. hello.py runs.

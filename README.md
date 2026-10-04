@@ -33,6 +33,7 @@ Full source links for each dataset, as downloaded, are listed in the Week 1 proj
 
 A fire-risk map of Yankari Game Reserve combining vegetation dryness (NDVI/NDMI from Landsat), terrain (slope from the DEM), rainfall, and weather into a single risk score per zone — checked against real fire occurrence from FIRMS to see whether the model's high-risk areas match where fires actually burned. Later in the year, this moves from a single manually-produced map toward an automated pipeline that re-runs itself on a schedule.
 
+# Month 1
 ## 6. Documentation and Weekly Deliverables
 
 - [Week 1 — Project Brief](project-brief.md) — the research question and a source link for every dataset

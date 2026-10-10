@@ -17,6 +17,25 @@ Each month's work answers a smaller piece of this question using one spatial ope
 **Yankari Game Reserve**, Bauchi State, Nigeria — approximately 2,244 km² of Sudan/Guinea savanna, centered near 9.75°N, 10.5°E. Yankari was chosen over other candidate sites (Ise Forest Reserve, Old Oyo National Park, Kamuku National Park) because annual dry-season bushfires — set mainly by poachers to flush game — are explicitly documented as one of the reserve's leading conservation threats, and its drier savanna climate gives far more usable, cloud-free satellite imagery during the fire season than a humid forest reserve would.
 
 ## 4. Datasets and Sources
+# Data Preparation Notes — Week 3
+# What I prepared
+- **Fire detections (FIRMS VIIRS S-NPP):** Downloaded in three monthly requests (Dec 2025, Jan 2026, Feb 2026) because of the 31-day limit, then combined with Merge Vector Layers into one shapefile that contained multiple point vectors. Clipped the points to the study area.
+- **Reserve boundary (WDPA):** Yankari Game Reserve polygon, reprojected to EPSG:32632.
+- **Elevation (SRTM 30m):** Clipped to the reserve extent and reprojected. Range: 145–1,368 m.
+- **Landsat 9 (Level-2 Surface Reflectance):** Bands 3, 4, 5, 6 only. Already atmospherically corrected, so no extra correction was applied. 
+- **Rainfall (CHIRPS daily):** Clipped to the Yankari extent. 
+- **Weather (NASA POWER):** One CSV with temperature, 10 m wind speed and relative humidity. The metadata lines at the top were skipped on import, and it was loaded as a table with no geometry.
+
+# Quality checks run
+- **CRS:** Confirmed every spatial layer is in EPSG:32632 before any analysis.
+- **Geometry validity:** Ran Check Validity on the boundary and fire points. Empty or invalid geometries: [none / number].
+- **Row counts:** Merged FIRMS file has 2004 rows, equal to the sum of the three monthly files.
+- **Date range:** All fire detections fall between 1 Dec 2025 and 28 Feb 2026.
+- **Visual check:** Layers overlap correctly on the map, with a bit of an offset between the appearance of the study area on the imagery and on the shapefile data.
+
+# Known limitations
+- Landsat is a single date, while fire points cover three months.
+- NASA POWER data is coarse (about 50 km grid), so it is effectively one value for the whole reserve.
 
 | Dataset | Source | Format |
 |---|---|---|

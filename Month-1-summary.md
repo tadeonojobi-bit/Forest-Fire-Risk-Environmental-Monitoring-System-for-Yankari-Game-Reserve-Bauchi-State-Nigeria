@@ -8,7 +8,7 @@
 
 **Got:** The count field contained a value of 2004 which corresponds to the number of records within the study area. The fact that I had filtered out for the Forest Reserve and clipped reduced the number of occurrences and made things easier.
 
-**What surprised me:** For a forest reserve, there were more fire occurrences than I expected which were as a result of controlled fires and other anthropogenic factors.
+**What surprised me:** For a forest reserve, there were less fire occurrences than I expected which were as a result of controlled fires and other anthropogenic factors.
 
 **What data I still need:** I still need the NDVI/NDMI layer to combine with this into an actual risk score, not just a fire count
 

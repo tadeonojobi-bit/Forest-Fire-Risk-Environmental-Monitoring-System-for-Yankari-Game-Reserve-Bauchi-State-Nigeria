@@ -52,4 +52,5 @@ See map results below
 
 # Month 2: development environment and early Python
 Week 5: set up Python, VS Code and the terminal. hello.py runs. Encountered issues with installing uv. It was installed using pip install uv, however, this allows for difficulties in calling uv in different terminals like in VS code or windows powershell. The method used to fix this was a reinstallation using "winget install --id astral-sh.uv -e --source winget". Then, I waited for an installation, and I restarted the powershell terminal and checked the version for authentication using "uv --version"
-Week 6: initiated the project using "uv init", then I observed the various sub packages formed within the environment. Pandas (a package used for enabling excel-type functions) was added using "uv add pandas" command. I experienced errors in using pandas as the main.py file did not exist after adding pandas. The initial code used was "uv run main.py". 
+Week 6: Set up the project with uv and added pandas. check.py prints the pandas version. 
+Initiated the project using "uv init", then I observed the various sub packages formed within the environment. Pandas (a package used for enabling excel-type functions) was added using "uv add pandas" command. I experienced errors in using pandas as the main.py file did not exist after adding pandas. The initial code used was "uv run main.py". 

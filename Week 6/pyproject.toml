@@ -1,0 +1,17 @@
+[project]
+name = "forest-fire-risk-environmental-monitoring-system-for-yankari-game-reserve-bauchi-state-nigeria"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "geopandas>=1.2.0",
+    "pandas>=3.0.6",
+]
+
+[project.scripts]
+forest-fire-risk-environmental-monitoring-system-for-yankari-game-reserve-bauchi-state-nigeria = "forest_fire_risk_environmental_monitoring_system_for_yankari_game_reserve_bauchi_state_nigeria:main"
+
+[build-system]
+requires = ["uv_build>=0.13.0,<0.14.0"]
+build-backend = "uv_build"

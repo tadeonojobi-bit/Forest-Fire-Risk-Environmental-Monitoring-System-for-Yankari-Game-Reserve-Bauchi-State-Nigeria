@@ -51,4 +51,5 @@ See map results below
 <img width="3507" height="2480" alt="Fire Records Map" src="https://github.com/user-attachments/assets/17fd6d76-1f82-40cc-bdba-127b59502656" />
 
 # Month 2: development environment and early Python
-Week 5: set up Python, VS Code and the terminal. hello.py runs.
+Week 5: set up Python, VS Code and the terminal. hello.py runs. Encountered issues with installing uv. It was installed using pip install uv, however, this allows for difficulties in calling uv in different terminals like in VS code or windows powershell. The method used to fix this was a reinstallation using winget install --id astral-sh.uv -e --source winget. Then, I waited for an installation, and I restarted the powershell terminal and checked the version for authentication using uv --version
+Week 6:

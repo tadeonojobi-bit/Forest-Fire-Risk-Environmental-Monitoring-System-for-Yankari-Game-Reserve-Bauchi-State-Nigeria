@@ -76,3 +76,5 @@ Week 6: Set up the project with uv and added pandas. check.py prints the pandas 
 Initiated the project using "uv init", then I observed the various sub packages formed within the environment. Pandas (a package used for enabling excel-type functions) was added using "uv add pandas" command. I experienced errors in using pandas as the main.py file did not exist after adding pandas. The initial code used was "uv run main.py". 
 
 Week 7: analyse.py reads wards.csv, converts each area and classifies each ward
+
+Week 8: inspect_data.py summarises the population and areas in the dummy data used as a result of a discovery in faulty csv dataset. A new dataset would be obtained and run to achieve similar results.

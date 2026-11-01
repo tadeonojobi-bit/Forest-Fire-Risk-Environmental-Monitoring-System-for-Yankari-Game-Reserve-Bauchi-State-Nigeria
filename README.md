@@ -78,3 +78,6 @@ Initiated the project using "uv init", then I observed the various sub packages 
 Week 7: analyse.py reads wards.csv, converts each area and classifies each ward
 
 Week 8: inspect_data.py summarises the population and areas in the dummy data used as a result of a discovery in faulty csv dataset. A new dataset would be obtained and run to achieve similar results.
+
+## Month 2 Reflesction
+Week 9: I realized that my data as at month 1 wasn't accurate. i had to download another to complete this project, and I'm working on a solution to fit it properly into my project. My capstone summarized the temperature data into 'smallest': 23.46, 'largest': 29.95, 'count': 90. Hence, there were 90 days captured, which is accurate for my project.

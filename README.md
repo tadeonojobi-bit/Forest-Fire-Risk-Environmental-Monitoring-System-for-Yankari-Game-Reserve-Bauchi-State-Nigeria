@@ -69,15 +69,43 @@ See map results below
 
 <img width="3507" height="2480" alt="Fire Records Map" src="https://github.com/user-attachments/assets/17fd6d76-1f82-40cc-bdba-127b59502656" />
 
-# Month 2: development environment and early Python
-Week 5: set up Python, VS Code and the terminal. hello.py runs. Encountered issues with installing uv. It was installed using pip install uv, however, this allows for difficulties in calling uv in different terminals like in VS code or windows powershell. The method used to fix this was a reinstallation using "winget install --id astral-sh.uv -e --source winget". Then, I waited for an installation, and I restarted the powershell terminal and checked the version for authentication using "uv --version"
+# Month 2 — Development Environment and Early Python
 
-Week 6: Set up the project with uv and added pandas. check.py prints the pandas version. 
-Initiated the project using "uv init", then I observed the various sub packages formed within the environment. Pandas (a package used for enabling excel-type functions) was added using "uv add pandas" command. I experienced errors in using pandas as the main.py file did not exist after adding pandas. The initial code used was "uv run main.py". 
+Month 2 moves the project from point-and-click GIS towards code. The work covered setting up a Python development environment (Python 3.14, VS Code, the terminal and `uv`), managing a project with `uv`, and using Python to read, convert, classify and summarise tabular data. These are the building blocks for automating the Yankari fire-risk analysis in later months.
 
-Week 7: analyse.py reads wards.csv, converts each area and classifies each ward
+## Documentation and Weekly Deliverables
 
-Week 8: inspect_data.py summarises the population and areas in the dummy data used as a result of a discovery in faulty csv dataset. A new dataset would be obtained and run to achieve similar results.
+- [Week 5 — Development Environment Setup](Hello.py) — Python, VS Code and the terminal configured; `Hello.py` runs and prints `My setup works!`Encountered issues with installing uv. It was installed using pip install uv, however, this allows for difficulties in calling uv in different terminals like in VS code or windows powershell. The method used to fix this was a reinstallation using "winget install --id astral-sh.uv -e --source winget". Then, I waited for an installation, and I restarted the powershell terminal and checked the version for authentication using "uv --version"
+- [Week 6 — Project Setup with uv](check.py) — project initialised with `uv`; `pandas` and `geopandas` added as dependencies; `check.py` prints the installed pandas version. Initiated the project using "uv init", then I observed the various sub packages formed within the environment. Pandas (a package used for enabling excel-type functions) was added using "uv add pandas" command. I experienced errors in using pandas as the main.py file did not exist after adding pandas. The initial code used was "uv run main.py". 
+- [Week 7 — First Analysis Script](analyse.py) — `analyse.py` reads `Wards.csv`, converts each ward's area from km² to hectares and classifies each ward as large or small. 
+- [Week 8 — Data Inspection](inspect_data.py) — `inspect_data.py` reports a CSV's row count and column names, and returns summary dictionaries (smallest, largest, count) for the area and population columns. `inspect_data.py` summarises the population and areas in the dummy data used as a result of a discovery in faulty csv dataset. A new dataset was obtained and run to achieve similar results.
+- [Week 9 — Consolidation and Refactoring](Week09/summary.py) — `summary.py` reorganises the earlier steps into reusable functions (`read_rows`, `clean_values`, `summarise`) plus `summarize_all`, which summarises several columns in one run
+
+
+## Technical Notes and Issues Resolved
+**Week 5 — Running a script in PowerShell.** Typing `print("my setup works")` directly at the PowerShell prompt returned `Unable to initialize device PRN`, because PowerShell treated `print` as a Windows command, not Python. Running the saved script with `python hello.py` printed the expected output.
+
+**Week 5 — Installing `uv`.** `uv` was first installed with `pip install uv`, but it could not be called reliably from other terminals such as the VS Code terminal and Windows PowerShell. It was reinstalled with `winget install --id astral-sh.uv -e --source winget`. Once the installation finished, PowerShell was restarted and the install was verified with `uv --version`.
+
+**Week 6 — Project layout.** `uv init` created a packaged project, with code under `src/` and a `[project.scripts]` entry in `pyproject.toml`, so there is no root-level `main.py`. `uv run main.py` therefore failed. Scripts saved in the project folder, such as `check.py`, run directly with `uv run check.py`.
+
+**Week 7 — Floating-point output.** Converting Mokola's area to hectares printed `930.0000000000001`, a normal floating-point rounding artefact. Values are rounded for display.
+
+**Week 8 — Faulty source data.** The weather CSV (`Climate.csv`) was found to be faulty: it held a single day (20 Sep 2026) of missing `-999` values, and the temperature-range parameter instead of daily temperature. `inspect_data.py` was therefore tested on a placeholder dataset (`Placeholder.csv`: four wards with area and population) while a corrected download was obtained.
+
+## Week 9 Results
+
+The corrected weather data (`ClimateData.csv`, daily NASA POWER values) was summarised with `summarize_all`:
+
+| Variable | Count | Smallest | Largest | Average |
+|---|---|---|---|---|
+| T2M — temperature at 2 m (°C) | 90 | 23.46 | 29.95 | 26.75 |
+| RH2M — relative humidity at 2 m (%) | 90 | 12.44 | 37.18 | 23.20 |
+
+A count of 90 matches the 90 days from 1 December 2025 to 28 February 2026, so the series covers the full dry-season window.
 
 ## Month 2 Reflection
-Week 9: I realized that my data as at month 1 wasn't accurate. i had to download another to complete this project, and I'm working on a solution to fit it properly into my project. My capstone summarized the temperature data into 'smallest': 23.46, 'largest': 29.95, 'count': 90. Hence, there were 90 days captured, which is accurate for my project.
+Month 2 shifted the work from desktop GIS to scripts that can be re-run. The key lesson came in Weeks 8 and 9: summarising the data in code exposed that the weather data prepared in Month 1 was inaccurate, which led to a corrected download that now passes the same checks. The corrected dataset is ready to be combined with the other layers in the risk analysis.
+
+## Month 3: geospatial Python and automation
+Week 10: GeoPandas. Loaded, checked, joined and mapped my [layer name] in code.

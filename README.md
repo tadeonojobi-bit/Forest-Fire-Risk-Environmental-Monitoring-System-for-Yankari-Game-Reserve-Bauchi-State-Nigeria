@@ -109,3 +109,5 @@ Month 2 shifted the work from desktop GIS to scripts that can be re-run. The key
 
 ## Month 3: geospatial Python and automation
 Week 10: GeoPandas. Loaded, checked, joined and mapped my [layer name] in code.
+
+Week 11: 

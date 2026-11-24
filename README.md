@@ -134,6 +134,10 @@ Mean NDVI is low and the maximum is only 0.43, which fits sparse or dried-out ve
 
 *Maps*
 my_map.png / my_map_ndvi.png, my_map_ndmi.png and my_map_ndwi.png, each with a colour bar and the reserve boundary.
+<img width="1375" height="1037" alt="my_map_ndvi" src="https://github.com/user-attachments/assets/f18888e5-8e03-440a-96f7-f129e8baab26" />
+<img width="1400" height="1037" alt="my_map_ndmi" src="https://github.com/user-attachments/assets/c651439d-212b-4128-8758-0955a35d089a" />
+<img width="1398" height="1037" alt="my_map_ndwi" src="https://github.com/user-attachments/assets/ba72ea69-b033-46e6-9a46-35df57678ebd" />
+
 
 *Limitation*
 This is a single date, 30 m resolution, and one polygon, so it shows the average condition of the whole reserve and hides variation inside it. Without field data or fire records for the same date, I cannot say that low NDMI means higher fire risk, only that it matches that expectation.

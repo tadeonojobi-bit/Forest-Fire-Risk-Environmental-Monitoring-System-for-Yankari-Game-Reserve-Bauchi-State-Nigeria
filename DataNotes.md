@@ -87,3 +87,8 @@ All files are located in C:\Users\tadeo\Downloads\GeoDev Lab\Data\Processed
 [Fire Records CLP.zip](https://github.com/user-attachments/files/32445836/Fire.Records.CLP.zip)
 
 
+# Data notes (Week 12)
+
+- Landsat 9 scene LC09_L2SP_187053_20260217_20260218_02_T1: downloaded from USGS EarthExplorer (Landsat Collection 2 Level-2). Bands 3, 4, 5, 6 saved as L9_B3_CLP.tif to L9_B6_CLP.tif.
+- Reserve boundary: Yankari GR UTM32.shp (GeoDev Lab starter data, UTM zone 32N).
+- Rasters are not uploaded to GitHub. Outputs in data/processed/ are derived from the scene above.

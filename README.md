@@ -108,8 +108,32 @@ A count of 90 matches the 90 days from 1 December 2025 to 28 February 2026, so t
 Month 2 shifted the work from desktop GIS to scripts that can be re-run. The key lesson came in Weeks 8 and 9: summarising the data in code exposed that the weather data prepared in Month 1 was inaccurate, which led to a corrected download that now passes the same checks. The corrected dataset is ready to be combined with the other layers in the risk analysis.
 
 ## Month 3: geospatial Python and automation
-Week 10: GeoPandas. Loaded, checked, joined and mapped my [layer name] in code.
+**Week 10:** GeoPandas. Loaded, checked, joined and mapped my [layer name] in code.
 
-Week 11: CRS checks and spatial operations
+**Week 11:** CRS checks and spatial operations
 
-Week 12: Raster inspection, NDVI and zonal statistics
+**Week 12:** Rasters (Yankari Game Reserve)
+
+*Scene used*
+Landsat 9 OLI/TIRS Collection 2 Level-2 surface reflectance, scene LC09_L2SP_187053_20260217_20260218_02_T1, acquired 17 February 2026 (late dry season). Cloud cover is 0.78%, so no cloud masking was needed. Bands 3, 4, 5 and 6 were used. [State whether you clipped the bands to the reserve yourself, or whether they came already clipped.]
+
+*Inspection*
+my_inspect.py checks width x resolution against right minus left. [Paste your result: for example, 30 m pixels, width x resolution = X, right - left = X, so they match / do not match.]
+
+*Indices (my_index.py)*
+Reflectance = DN x 0.0000275 - 0.2. Three indices were saved to data/processed/:
+- NDVI: range 0.010 to 0.434, mean 0.183
+- NDMI: range -0.720 to 0.265, mean -0.082
+- NDWI: range -0.444 to -0.056, mean -0.288
+
+*Zonal results (my_zonal.py)*
+My boundary layer is one polygon (the whole reserve), so the zonal table has one row: mean NDVI 0.183, mean NDMI -0.082, mean NDWI -0.288. These equal the whole-scene means because the bands are already limited to the reserve.
+
+*What the results suggest*
+Mean NDVI is low and the maximum is only 0.43, which fits sparse or dried-out vegetation at the end of the dry season. The negative mean NDMI points to low vegetation moisture, which is the condition that favours fire spread. NDWI is negative everywhere, so open water is not visible at 30 m. Together this suggests the reserve was dry and fuel-ready on this date.
+
+*Maps*
+my_map.png / my_map_ndvi.png, my_map_ndmi.png and my_map_ndwi.png, each with a colour bar and the reserve boundary.
+
+*Limitation*
+This is a single date, 30 m resolution, and one polygon, so it shows the average condition of the whole reserve and hides variation inside it. Without field data or fire records for the same date, I cannot say that low NDMI means higher fire risk, only that it matches that expectation.
